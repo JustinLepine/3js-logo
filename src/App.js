@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import './App.scss';
-import Box from './components/Box';
-import Sphere from './components/AnimatedSphere';
+import Box from './components/Box/Box';
+import Sphere from './components/Sphere/AnimatedSphere';
 import { OrbitControls } from '@react-three/drei';
 import {Canvas} from '@react-three/fiber';
 
@@ -17,7 +17,7 @@ function App() {
         </Suspense>
       </Canvas>
       <Canvas className='app__canvas'>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} enableRotate={false} />
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} intensity={1} />
         <Suspense fallback={null}>

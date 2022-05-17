@@ -9,14 +9,14 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/hero.gltf')
   return (
-    <group ref={group} {...props} dispose={null}>
-      <mesh geometry={nodes['main-cube'].geometry} material={materials.Material} />
+    <group rotation={[0.6,0.7,0]} ref={group} {...props} dispose={null}>
+      <mesh geometry={nodes['main-cube'].geometry} material={materials['Material.004']} />
       <mesh geometry={nodes['Js-yellow'].geometry} material={materials['Material.003']} position={[0, 1.03, 0]} scale={[0.8, 0.04, 0.8]} />
-      <mesh geometry={nodes['Js-text'].geometry} material={materials['Material.004']} position={[0.65, 1.09, 0.18]} rotation={[0, Math.PI / 2, 0]} />
+      <mesh geometry={nodes['Js-text'].geometry} material={materials['Material.007']} position={[-0.15, 1.09, 0.65]} />
       <mesh geometry={nodes['express-white'].geometry} material={materials['Material.005']} position={[0, 0, -1.03]} rotation={[Math.PI / 2, 0, 0]} scale={[0.8, 0.04, 0.8]} />
       <mesh geometry={nodes['express-text'].geometry} material={materials['Material.006']} position={[0.73, -0.09, -1.08]} rotation={[Math.PI / 2, 0, Math.PI]} scale={0.51} />
       <mesh geometry={nodes['react-grey'].geometry} material={materials['Material.004']} position={[0, 0, 1.03]} rotation={[Math.PI / 2, 0, 0]} scale={[0.8, 0.04, 0.8]} />
-      <mesh geometry={nodes['react-sphere'].geometry} material={materials['Material.011']} position={[0, 0, 1.07]} scale={-0.13} />
+      <mesh geometry={nodes['react-sphere'].geometry} material={materials['Material.012']} position={[0, 0, 1.07]} scale={-0.13} />
       <mesh geometry={nodes['react-oval1'].geometry} material={materials['Material.012']} position={[0, 0, 1.11]} rotation={[Math.PI / 2, 0, 0]} scale={[0.72, 0.33, 0.3]} />
       <mesh geometry={nodes['react-oval3'].geometry} material={materials['Material.012']} position={[0, 0, 1.11]} rotation={[Math.PI / 2, 1.07, 0]} scale={[0.72, 0.33, 0.3]} />
       <mesh geometry={nodes['react-oval2'].geometry} material={materials['Material.012']} position={[0, 0, 1.11]} rotation={[Math.PI / 2, -1.06, 0]} scale={[0.72, 0.33, 0.3]} />
@@ -30,7 +30,7 @@ export default function Model({ ...props }) {
       <mesh geometry={nodes['node-e-middle'].geometry} material={materials['Material.015']} position={[-1.13, -0.04, 0.46]} rotation={[-Math.PI / 6, 0, -Math.PI / 2]} scale={0.03} />
       <mesh geometry={nodes['github-white'].geometry} material={materials['Material.005']} position={[1.03, 0, 0]} rotation={[0, 0, -Math.PI / 2]} scale={[0.8, 0.04, 0.8]} />
       <mesh geometry={nodes['sass-black'].geometry} material={materials['Material.007']} position={[0, -1.03, 0]} scale={[0.8, 0.04, 0.8]} />
-      <mesh geometry={nodes.Circle.geometry} material={materials['Material.015']} position={[-1.14, -0.05, -0.46]} rotation={[-0.53, 0, -Math.PI / 2]} scale={0.15} />
+      <mesh geometry={nodes['node-n'].geometry} material={materials['Material.015']} position={[-1.14, -0.05, -0.46]} rotation={[-0.53, 0, -Math.PI / 2]} scale={0.15} />
       <mesh geometry={nodes['github-logo'].geometry} material={materials['Material.004']} position={[1.08, -0.06, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={4.92} />
       <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.002']} position={[0.74, -1.1, 0.73]} rotation={[0, 0, Math.PI]} scale={[9.11, 10.78, 9.11]} />
     </group>
